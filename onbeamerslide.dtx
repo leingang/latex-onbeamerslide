@@ -3,7 +3,7 @@
 %<*driver>
 \ProvidesFile{onbeamerslide.dtx}
 %</driver>
-%<pkg>\ProvidesPackage{onbeamerslide}
+%<pkg>\ProvidesFile{tikzlibraryonbeamerslide.code.tex}
 %<*pkg>
   [2020/10/09 14:15:03 v0.0 This TikZ library adds keys tto allow sytyles to change based on the beamer slide number]
 %</pkg>
@@ -18,7 +18,7 @@
 % \fi
 %
 % \GetFileInfo{onbeamerslide.dtx}
-% \title{This TikZ library adds keys tto allow sytyles to change based on the beamer slide number}
+% \title{Styling TikZ nodes by Beamer slide number}
 % \author{Matthew Leingang\thanks{leingang@nyu.edu}}
 % \date{\fileversion, Released \filedate}
 % \maketitle
@@ -40,7 +40,13 @@
 %    \end{macrocode}
 %
 %    \begin{macrocode}
-\typeout{Actually this isn't a real package!}
+\RequirePackage{tikz}
+\tikzset{%
+  onslide/.code args={<#1>#2}{%
+    \only<#1>{\pgfkeysalso{#2}}},
+  temporal/.code args={<#1>#2#3#4}{%
+    \temporal<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}}{\pgfkeysalso{#4}}}
+}
 %    \end{macrocode}
 %
 %    \begin{macrocode}

@@ -3,7 +3,9 @@
 \askforoverwritefalse
 \preamble
 ----------------------------------------------------------------
-onbeamerslide --- This TikZ library adds keys tto allow sytyles to change based on the beamer slide number
+
+onbeamerslide --- TikZ library to allow styles to change based on the beamer
+slide number
 by Matthew Leingang <leingang@nyu.edu>
 
 Released under the MIT License
@@ -29,11 +31,15 @@ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
 FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
-CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.This work consists of the files onbeamerslide.dtx
-                            and onbeamerslide.ins,
-and the derived files           onbeamerslide.sty,
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+This work consists of the files onbeamerslide.dtx,
+                                onbeamerslide.ins,
+                            and example.tex,
+and the derived files           tikzlibraryonbeamerslide.code.tex,
                                 onbeamerslide.pdf,
-                            and onbeamerslide-code.pdf.
+                                onbeamerslide-code.pdf,
+                            and example.pdf
 \endpostamble
-\generate{\file{\jobname.sty}{\from{\jobname.dtx}{pkg}}}
+\generate{\file{tikzlibrary\jobname.code.tex}{\from{\jobname.dtx}{pkg}}}
 \endbatchfile

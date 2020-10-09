@@ -3,7 +3,9 @@
 
 module = "onbeamerslide"
 
-typesetfiles = {"*.tex"}
+installfiles = {"tikzlibraryonbeamerslide.code.tex"}
+typesetfiles = {"example.tex","onbeamerslide.tex","onbeamerslide-code.tex"}
+demofiles = {"example.tex"}
 
 
 -- The "luatex" engine produces some very minor differences (like, a single
